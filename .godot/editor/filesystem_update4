@@ -1,0 +1,5 @@
+res://scenes/rocket.tscn
+res://scenes/player/player.tscn
+res://scenes/player/player.gd
+res://scenes/player/rocket.tscn
+res://scenes/main.tscn

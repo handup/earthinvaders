@@ -1,0 +1,12 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1794082195
+icon.svg::CompressedTexture2D::6951549194427376226::1794079792::1794080800::1::::<><><>0<>0<>93b08629217bbb5b291d3e253e604910<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://ASSets/::1794080800
+Ball.png::CompressedTexture2D::5337564877385366298::1791478488::1794080800::1::::<><><>0<>0<>c1077950c487bd83e16d6296c7134811<>res://.godot/imported/Ball.png-45941f11124c49a646063e6652331b0b.ctex::
+BallMotion.png::CompressedTexture2D::8547790838545520621::1791478488::1794080800::1::::<><><>0<>0<>639f1daef6fb056bc0eec7142187e78b<>res://.godot/imported/BallMotion.png-d4481a9a2a627bf41661694525bb8b56.ctex::
+::res://scenes/::1794082252
+main.tscn::PackedScene::4390531397271625638::1794082161::0::1::::<><><>0<>0<><>::uid://cbici8sgdb6i2::::res://scenes/player/player.tscn
+::res://scenes/player/::1794082129
+player.gd::GDScript::191568463411931392::1794082312::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.tscn::PackedScene::4859682714747216031::1794082320::0::1::::<><><>0<>0<><>::uid://c6x2ib32w3pmd::::res://scenes/rocket.tscn
+rocket.tscn::PackedScene::6997829950699662455::1794082252::0::1::::<><><>0<>0<><>::

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://c6x2ib32w3pmd"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1lldk"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="Gradient" id="Gradient_00dr1"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o5qli"]
+gradient = SubResource("Gradient_00dr1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(24, 52)
+
+[node name="Ball" type="RigidBody2D" unique_id=401352303]
+z_index = 999
+rotation = 1.5707964
+physics_material_override = SubResource("PhysicsMaterial_1lldk")
+gravity_scale = 0.0
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 1
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1949179374]
+visible = false
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1915268044]
+position = Vector2(-2.3841858e-07, 4.7683716e-07)
+scale = Vector2(0.1875, 0.40624997)
+texture = SubResource("GradientTexture2D_o5qli")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1101204398]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=469417145]
+pitch_scale = 2.01
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
