@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c6x2ib32w3pmd"]
 
+[ext_resource type="Script" uid="uid://de4q0btsbsea4" path="res://scenes/player/rocket.gd" id="1_3i2u6"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1lldk"]
 friction = 0.0
 bounce = 1.0
@@ -12,14 +14,14 @@ gradient = SubResource("Gradient_00dr1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(24, 52)
 
-[node name="Ball" type="RigidBody2D" unique_id=401352303]
+[node name="Rocket" type="RigidBody2D" unique_id=1555654723]
 z_index = 999
-rotation = 1.5707964
+collision_layer = 2
 physics_material_override = SubResource("PhysicsMaterial_1lldk")
 gravity_scale = 0.0
-continuous_cd = 2
 contact_monitor = true
 max_contacts_reported = 1
+script = ExtResource("1_3i2u6")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1949179374]
 visible = false
@@ -39,5 +41,3 @@ shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="HitSound" type="AudioStreamPlayer2D" parent="." unique_id=469417145]
 pitch_scale = 2.01
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

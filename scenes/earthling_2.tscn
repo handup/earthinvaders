@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bbjqlts8u32qb"]
+
+[ext_resource type="Script" uid="uid://c0bhxyud44bm2" path="res://scenes/earthling.gd" id="1_510ef"]
+[ext_resource type="Texture2D" uid="uid://c6bm88shaywkw" path="res://icon.svg" id="1_bnhe3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4miue"]
+
+[sub_resource type="Animation" id="Animation_yqgw1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_30be8"]
+resource_name = "break"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r0es6"]
+_data = {
+&"RESET": SubResource("Animation_yqgw1"),
+&"break": SubResource("Animation_30be8")
+}
+
+[node name="Earthling2" type="StaticBody2D" unique_id=75532010 groups=["Earthling"]]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_510ef")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1657958369]
+position = Vector2(10, 10)
+scale = Vector2(0.15625, 0.15625)
+texture = ExtResource("1_bnhe3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1846906784]
+position = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_4miue")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1392020668]
+libraries/ = SubResource("AnimationLibrary_r0es6")

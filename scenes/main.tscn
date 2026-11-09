@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://b3s2n7yeidtys"]
 
 [ext_resource type="PackedScene" uid="uid://cbici8sgdb6i2" path="res://scenes/player/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bmrd4i68kcyb2" path="res://scenes/earthlings.tscn" id="2_0wfyh"]
+[ext_resource type="Script" uid="uid://dnus5r3jwlmjy" path="res://scenes/area_2d.gd" id="3_sugp2"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xu7wj"]
 normal = Vector2(1, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w6ksv"]
 normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4miue"]
+normal = Vector2(0, 1)
 
 [node name="Game" type="Node2D" unique_id=227766720]
 
@@ -25,3 +30,15 @@ position = Vector2(1152, 602)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall" unique_id=1286329152]
 shape = SubResource("WorldBoundaryShape2D_w6ksv")
+
+[node name="Earthlings" parent="." unique_id=1898000179 instance=ExtResource("2_0wfyh")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1210056944]
+position = Vector2(583, -51)
+collision_mask = 3
+script = ExtResource("3_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=440253125]
+shape = SubResource("WorldBoundaryShape2D_4miue")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

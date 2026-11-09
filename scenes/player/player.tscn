@@ -10,16 +10,19 @@ width = 120
 height = 18
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vfcb7"]
-size = Vector2(18, 120.25)
+size = Vector2(18, 59)
 
 [node name="Player" type="CharacterBody2D" unique_id=99828147]
 disable_mode = 1
+collision_layer = 2
 script = ExtResource("1_8afob")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=1422871134]
 rotation = 1.5707964
+scale = Vector2(0.5004424, 1)
 texture = SubResource("GradientTexture2D_c75ft")
+offset = Vector2(-1.3280792, 0.14683667)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2139604535]
-position = Vector2(0, 1)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_vfcb7")

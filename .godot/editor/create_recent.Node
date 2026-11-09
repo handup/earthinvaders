@@ -1,3 +1,11 @@
-CollisionShape2D
-StaticBody2D
 RigidBody2D
+AnimatableBody2D
+StaticBody2D
+Node2D
+Node
+CanvasModulate
+CanvasGroup
+Timer
+CollisionShape2D
+Area2D
+Sprite2D

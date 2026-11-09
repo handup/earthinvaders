@@ -1,0 +1,206 @@
+[gd_scene format=3 uid="uid://bmrd4i68kcyb2"]
+
+[ext_resource type="PackedScene" uid="uid://by5fuoynjvdyx" path="res://scenes/earthling_4.tscn" id="1_e037t"]
+[ext_resource type="Script" uid="uid://b75lp2x1fqybm" path="res://scenes/earthlings.gd" id="1_g8pf7"]
+[ext_resource type="PackedScene" uid="uid://cw3ccjna5alap" path="res://scenes/earthling_1.tscn" id="2_01ocv"]
+[ext_resource type="PackedScene" uid="uid://dpudno7ry7cak" path="res://scenes/earthling_3.tscn" id="3_8dgls"]
+
+[node name="Earthlings" type="Node2D" unique_id=1859950478]
+script = ExtResource("1_g8pf7")
+
+[node name="BrickRow" type="Node2D" parent="." unique_id=2088968695]
+
+[node name="Brick10" parent="BrickRow" unique_id=75532010 instance=ExtResource("1_e037t")]
+position = Vector2(752, 88)
+
+[node name="Brick7" parent="BrickRow" unique_id=2022377623 instance=ExtResource("1_e037t")]
+position = Vector2(220, 88)
+
+[node name="Brick6" parent="BrickRow" unique_id=91358728 instance=ExtResource("1_e037t")]
+position = Vector2(448, 88)
+
+[node name="Brick" parent="BrickRow" unique_id=1144867832 instance=ExtResource("1_e037t")]
+position = Vector2(296, 88)
+
+[node name="Brick2" parent="BrickRow" unique_id=308547919 instance=ExtResource("1_e037t")]
+position = Vector2(372, 88)
+
+[node name="Brick5" parent="BrickRow" unique_id=1667136553 instance=ExtResource("1_e037t")]
+position = Vector2(144, 88)
+
+[node name="Brick4" parent="BrickRow" unique_id=801995944 instance=ExtResource("1_e037t")]
+position = Vector2(524, 88)
+
+[node name="Brick8" parent="BrickRow" unique_id=974128162 instance=ExtResource("1_e037t")]
+position = Vector2(600, 88)
+
+[node name="Brick9" parent="BrickRow" unique_id=586772862 instance=ExtResource("1_e037t")]
+position = Vector2(676, 88)
+
+[node name="Brick11" parent="BrickRow" unique_id=1129326205 instance=ExtResource("1_e037t")]
+position = Vector2(828, 88)
+
+[node name="BrickGroup8" type="Node2D" parent="." unique_id=1887268430]
+
+[node name="Brick10" parent="BrickGroup8" unique_id=1542892490 instance=ExtResource("2_01ocv")]
+position = Vector2(751, 198)
+
+[node name="Brick7" parent="BrickGroup8" unique_id=1902150398 instance=ExtResource("2_01ocv")]
+position = Vector2(219, 198)
+
+[node name="Brick6" parent="BrickGroup8" unique_id=1057246841 instance=ExtResource("2_01ocv")]
+position = Vector2(447, 198)
+
+[node name="Brick" parent="BrickGroup8" unique_id=132884912 instance=ExtResource("2_01ocv")]
+position = Vector2(295, 198)
+
+[node name="Brick2" parent="BrickGroup8" unique_id=382149183 instance=ExtResource("2_01ocv")]
+position = Vector2(371, 198)
+
+[node name="Brick5" parent="BrickGroup8" unique_id=1082284546 instance=ExtResource("2_01ocv")]
+position = Vector2(143, 198)
+
+[node name="Brick4" parent="BrickGroup8" unique_id=1006292264 instance=ExtResource("2_01ocv")]
+position = Vector2(523, 198)
+
+[node name="Brick8" parent="BrickGroup8" unique_id=915660823 instance=ExtResource("2_01ocv")]
+position = Vector2(599, 198)
+
+[node name="Brick9" parent="BrickGroup8" unique_id=1485005323 instance=ExtResource("2_01ocv")]
+position = Vector2(675, 198)
+
+[node name="Brick11" parent="BrickGroup8" unique_id=444699304 instance=ExtResource("2_01ocv")]
+position = Vector2(828, 197)
+
+[node name="BrickGroup2" type="Node2D" parent="." unique_id=1764968294]
+
+[node name="Brick10" parent="BrickGroup2" unique_id=965995040 instance=ExtResource("1_e037t")]
+position = Vector2(752, 110)
+
+[node name="Brick7" parent="BrickGroup2" unique_id=1438082542 instance=ExtResource("1_e037t")]
+position = Vector2(220, 110)
+
+[node name="Brick6" parent="BrickGroup2" unique_id=523483217 instance=ExtResource("1_e037t")]
+position = Vector2(448, 110)
+
+[node name="Brick" parent="BrickGroup2" unique_id=652391945 instance=ExtResource("1_e037t")]
+position = Vector2(296, 110)
+
+[node name="Brick2" parent="BrickGroup2" unique_id=552160229 instance=ExtResource("1_e037t")]
+position = Vector2(372, 110)
+
+[node name="Brick5" parent="BrickGroup2" unique_id=1275395542 instance=ExtResource("1_e037t")]
+position = Vector2(144, 110)
+
+[node name="Brick4" parent="BrickGroup2" unique_id=1618731763 instance=ExtResource("1_e037t")]
+position = Vector2(524, 110)
+
+[node name="Brick8" parent="BrickGroup2" unique_id=472683763 instance=ExtResource("1_e037t")]
+position = Vector2(600, 110)
+
+[node name="Brick9" parent="BrickGroup2" unique_id=506952869 instance=ExtResource("1_e037t")]
+position = Vector2(676, 110)
+
+[node name="Brick11" parent="BrickGroup2" unique_id=926698830 instance=ExtResource("1_e037t")]
+position = Vector2(828, 110)
+
+[node name="BrickRow4" type="Node2D" parent="." unique_id=1856296097]
+
+[node name="Brick10" parent="BrickRow4" unique_id=277347532 instance=ExtResource("3_8dgls")]
+position = Vector2(752, 154)
+
+[node name="Brick7" parent="BrickRow4" unique_id=601668975 instance=ExtResource("3_8dgls")]
+position = Vector2(220, 154)
+
+[node name="Brick6" parent="BrickRow4" unique_id=568087997 instance=ExtResource("3_8dgls")]
+position = Vector2(448, 154)
+
+[node name="Brick" parent="BrickRow4" unique_id=550926882 instance=ExtResource("3_8dgls")]
+position = Vector2(296, 154)
+
+[node name="Brick2" parent="BrickRow4" unique_id=1794409506 instance=ExtResource("3_8dgls")]
+position = Vector2(372, 154)
+
+[node name="Brick5" parent="BrickRow4" unique_id=1274962748 instance=ExtResource("3_8dgls")]
+position = Vector2(144, 154)
+
+[node name="Brick4" parent="BrickRow4" unique_id=776174047 instance=ExtResource("3_8dgls")]
+position = Vector2(524, 154)
+
+[node name="Brick8" parent="BrickRow4" unique_id=1711185352 instance=ExtResource("3_8dgls")]
+position = Vector2(600, 154)
+
+[node name="Brick9" parent="BrickRow4" unique_id=1957880467 instance=ExtResource("3_8dgls")]
+position = Vector2(676, 154)
+
+[node name="Brick11" parent="BrickRow4" unique_id=567546367 instance=ExtResource("3_8dgls")]
+position = Vector2(828, 154)
+
+[node name="BrickGroup7" type="Node2D" parent="." unique_id=469689654]
+
+[node name="Brick10" parent="BrickGroup7" unique_id=450084902 instance=ExtResource("2_01ocv")]
+position = Vector2(751, 176)
+
+[node name="Brick7" parent="BrickGroup7" unique_id=550550732 instance=ExtResource("2_01ocv")]
+position = Vector2(219, 176)
+
+[node name="Brick6" parent="BrickGroup7" unique_id=1195379201 instance=ExtResource("2_01ocv")]
+position = Vector2(447, 176)
+
+[node name="Brick" parent="BrickGroup7" unique_id=1181198861 instance=ExtResource("2_01ocv")]
+position = Vector2(295, 176)
+
+[node name="Brick2" parent="BrickGroup7" unique_id=1428676639 instance=ExtResource("2_01ocv")]
+position = Vector2(371, 176)
+
+[node name="Brick5" parent="BrickGroup7" unique_id=934882044 instance=ExtResource("2_01ocv")]
+position = Vector2(143, 176)
+
+[node name="Brick4" parent="BrickGroup7" unique_id=1496482242 instance=ExtResource("2_01ocv")]
+position = Vector2(523, 176)
+
+[node name="Brick8" parent="BrickGroup7" unique_id=1814015291 instance=ExtResource("2_01ocv")]
+position = Vector2(599, 176)
+
+[node name="Brick9" parent="BrickGroup7" unique_id=1099547623 instance=ExtResource("2_01ocv")]
+position = Vector2(675, 176)
+
+[node name="Brick11" parent="BrickGroup7" unique_id=607929151 instance=ExtResource("2_01ocv")]
+position = Vector2(828, 175)
+
+[node name="BrickRow3" type="Node2D" parent="." unique_id=1023016833]
+
+[node name="Brick10" parent="BrickRow3" unique_id=723673037 instance=ExtResource("3_8dgls")]
+position = Vector2(752, 132)
+
+[node name="Brick7" parent="BrickRow3" unique_id=2052997957 instance=ExtResource("3_8dgls")]
+position = Vector2(220, 132)
+
+[node name="Brick6" parent="BrickRow3" unique_id=981829792 instance=ExtResource("3_8dgls")]
+position = Vector2(448, 132)
+
+[node name="Brick" parent="BrickRow3" unique_id=1622128113 instance=ExtResource("3_8dgls")]
+position = Vector2(296, 132)
+
+[node name="Brick2" parent="BrickRow3" unique_id=1871338249 instance=ExtResource("3_8dgls")]
+position = Vector2(372, 132)
+
+[node name="Brick5" parent="BrickRow3" unique_id=1790718887 instance=ExtResource("3_8dgls")]
+position = Vector2(144, 132)
+
+[node name="Brick4" parent="BrickRow3" unique_id=198356704 instance=ExtResource("3_8dgls")]
+position = Vector2(524, 132)
+
+[node name="Brick8" parent="BrickRow3" unique_id=1709280404 instance=ExtResource("3_8dgls")]
+position = Vector2(600, 132)
+
+[node name="Brick9" parent="BrickRow3" unique_id=1536650032 instance=ExtResource("3_8dgls")]
+position = Vector2(676, 132)
+
+[node name="Brick11" parent="BrickRow3" unique_id=1330447578 instance=ExtResource("3_8dgls")]
+position = Vector2(828, 132)
+
+[node name="Movement" type="Timer" parent="." unique_id=628573124]
+autostart = true
+
+[connection signal="timeout" from="Movement" to="." method="_on_movement_timeout"]
