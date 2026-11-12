@@ -1,5 +1,6 @@
 extends StaticBody2D
-const rocket = preload("uid://c6x2ib32w3pmd")
+const rocket = preload("uid://co27dlwb005te")
+
 
 var spawnedRocket = null
 
@@ -21,7 +22,9 @@ func shoot():
 	var rocketNode: RigidBody2D = rocket.instantiate()
 	spawnedRocket = rocketNode
 	rocketNode.top_level = true
-	rocketNode.position = position
+	# TODO: maybe look into it at some point MAYBE
+	rocketNode.position = global_position
 	rocketNode.position.y += 20
-	rocketNode.linear_velocity.y = -500
+	rocketNode.linear_velocity.y = 500
 	add_child(rocketNode)
+	return spawnedRocket

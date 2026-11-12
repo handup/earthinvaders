@@ -7,6 +7,6 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	for shotBody in get_colliding_bodies():
-		if shotBody.is_in_group("Earthling"):
-			queue_free()
+		queue_free()
+		if (shotBody.has_method("die")):
 			shotBody.die()

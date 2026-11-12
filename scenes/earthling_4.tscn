@@ -43,8 +43,6 @@ _data = {
 }
 
 [node name="Earthling4" type="StaticBody2D" unique_id=75532010 groups=["Earthling"]]
-collision_layer = 3
-collision_mask = 3
 script = ExtResource("1_oux7k")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834894635]

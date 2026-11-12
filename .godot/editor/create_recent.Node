@@ -1,7 +1,7 @@
+Node2D
 RigidBody2D
 AnimatableBody2D
 StaticBody2D
-Node2D
 Node
 CanvasModulate
 CanvasGroup

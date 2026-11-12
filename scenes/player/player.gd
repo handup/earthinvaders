@@ -1,5 +1,6 @@
 extends CharacterBody2D
 const rocket = preload("res://scenes/player/rocket.tscn")
+@onready var game: Node2D = $".."
 
 
 const SPEED = 500.0
@@ -18,6 +19,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+func die():
+	# GAME OVER emit to game maner
+	queue_free()
+	game.currentState = game.State.DEATH
 
 func shoot():
 	if spawnedRocket: 
