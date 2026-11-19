@@ -1,14 +1,5 @@
-res://scenes/earthlings.tscn
 res://scenes/earthlings.gd
-res://scenes/player/enemy_rocket.tscn
-res://scenes/earthling_1.tscn
-res://scenes/earthling_2.tscn
-res://scenes/earthling_3.tscn
-res://scenes/earthling_4.tscn
-res://scenes/player/rocket.gd
-res://scenes/earthling.gd
 res://scenes/main.tscn
-res://scenes/player/player.tscn
-res://scenes/player/rocket.tscn
-res://scenes/player/player.gd
 res://scenes/main.gd
+res://scenes/player/player.gd
+res://scenes/player/player.tscn

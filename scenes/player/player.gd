@@ -7,9 +7,14 @@ const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 var spawnedRocket = null
 
+signal death
+
+func _ready() -> void:
+	position = Vector2(560, 593)
+	rotation_degrees = -90
+
 func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("shoot"):
-		print("here")
 		shoot()
 
 	var direction := Input.get_axis("moveLeft", "moveRight")
@@ -21,9 +26,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func die():
-	# GAME OVER emit to game maner
+	death.emit()
 	queue_free()
-	game.currentState = game.State.DEATH
 
 func shoot():
 	if spawnedRocket: 

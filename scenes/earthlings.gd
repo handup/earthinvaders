@@ -7,16 +7,23 @@ const MOVEMENT_DISTANCE = 20
 var direction = MOVEMENT_DISTANCE
 var movementCounter = 1
 
+
 func _process(delta: float) -> void:
-	if(game.currentState == game.State.PLAYING):
-		var earthling_groups = get_children()
-		for earthling_group in earthling_groups:
-			for earthling in earthling_group.get_children():
-				if canShoot() and (abs(player.position.x - earthling.position.x)< 200):
-					earthling.shoot()
-	else:
-		movement.paused = true
+	match game.currentState:
+		Main.State.PLAYING:
+			movement.paused = false
+			shootIfPlayerClose()
+		Main.State.PAUSE, Main.State.GAME_OVER:
+			movement.paused = true
+			pass
 		
+func shootIfPlayerClose():
+	if !player: return
+	for earthling_group in get_children():
+		for earthling in earthling_group.get_children():
+			if canShoot() and (abs(player.position.x - earthling.position.x) < 200):
+				earthling.shoot()
+
 
 func canShoot():
 	return (randi() % 20 == 2) and get_tree().get_nodes_in_group("enemy_rocket").size() < 3
