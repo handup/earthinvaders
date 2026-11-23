@@ -1,5 +1,10 @@
-res://scenes/earthlings.gd
-res://scenes/main.tscn
-res://scenes/main.gd
-res://scenes/player/player.gd
 res://scenes/player/player.tscn
+res://scenes/main.gd
+res://scenes/earthling.gd
+res://scenes/earthling_1.tscn
+res://scenes/main.tscn
+res://scenes/label.gd
+res://scenes/game_won_label.gd
+res://scenes/mothership.tscn
+res://scenes/mothership.gd
+res://scenes/area_2d.gd

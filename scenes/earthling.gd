@@ -1,8 +1,11 @@
 extends StaticBody2D
 const rocket = preload("uid://co27dlwb005te")
+@onready var game: Main = $"../../.."
 
 
 var spawnedRocket = null
+
+signal death
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,6 +17,7 @@ func _process(delta: float) -> void:
 	pass
 
 func die():
+	game._on_enemy_death(100)
 	queue_free()
 
 func shoot():

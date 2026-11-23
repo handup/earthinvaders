@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://djodddmu5ui6e" path="res://scenes/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bmrd4i68kcyb2" path="res://scenes/earthlings.tscn" id="2_0wfyh"]
 [ext_resource type="Script" uid="uid://dnus5r3jwlmjy" path="res://scenes/area_2d.gd" id="3_sugp2"]
+[ext_resource type="Script" uid="uid://dp2s860osbos3" path="res://scenes/label.gd" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://u3jnqhp1vk2m" path="res://scenes/game_won_label.gd" id="5_tbgi4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_xu7wj"]
 normal = Vector2(1, 0)
@@ -14,6 +16,9 @@ normal = Vector2(-1, 0)
 normal = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbgi4"]
+normal = Vector2(1, 0)
 
 [node name="Game" type="Node2D" unique_id=227766720]
 process_mode = 3
@@ -33,27 +38,56 @@ shape = SubResource("WorldBoundaryShape2D_w6ksv")
 
 [node name="Earthlings" parent="." unique_id=1898000179 instance=ExtResource("2_0wfyh")]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1210056944]
+[node name="CeilingDespawnArea" type="Area2D" parent="." unique_id=1210056944]
 position = Vector2(583, -51)
 collision_mask = 3
 script = ExtResource("3_sugp2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=440253125]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CeilingDespawnArea" unique_id=440253125]
 shape = SubResource("WorldBoundaryShape2D_4miue")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1582340893]
+[node name="FloorDespawnArea" type="Area2D" parent="." unique_id=1582340893]
 position = Vector2(583, -51)
 collision_mask = 3
 script = ExtResource("3_sugp2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=615882107]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FloorDespawnArea" unique_id=615882107]
 position = Vector2(-41, 709)
 shape = SubResource("WorldBoundaryShape2D_sugp2")
 
 [node name="RespawnTimer" type="Timer" parent="." unique_id=478360249]
 one_shot = true
 
+[node name="Label" type="Label" parent="." unique_id=79086232]
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 45.0
+offset_bottom = 29.0
+script = ExtResource("4_jyhfs")
+
+[node name="GameWonLabel" type="Label" parent="." unique_id=1498443449]
+visible = false
+offset_left = 331.0
+offset_top = 353.0
+offset_right = 848.0
+offset_bottom = 376.0
+text = "You won. Earthlings annihilated, congratulations on your genocide."
+script = ExtResource("5_tbgi4")
+
+[node name="LeftDespawnArea" type="Area2D" parent="." unique_id=1639277196]
+position = Vector2(31, 46)
+collision_mask = 3
+script = ExtResource("3_sugp2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftDespawnArea" unique_id=1703925844]
+position = Vector2(-153, 2)
+shape = SubResource("WorldBoundaryShape2D_tbgi4")
+
+[connection signal="game_won" from="." to="GameWonLabel" method="_on_game_game_won"]
+[connection signal="score_changed" from="." to="Label" method="_on_game_score_changed"]
 [connection signal="state_changed" from="." to="Earthlings" method="_on_game_state_changed"]
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
+[connection signal="state_changed" from="." to="GameWonLabel" method="_on_game_state_changed"]
+[connection signal="body_entered" from="CeilingDespawnArea" to="CeilingDespawnArea" method="_on_body_entered"]
+[connection signal="body_entered" from="FloorDespawnArea" to="FloorDespawnArea" method="_on_body_entered"]
 [connection signal="timeout" from="RespawnTimer" to="." method="_on_respawn_timer_timeout"]
+[connection signal="body_entered" from="LeftDespawnArea" to="LeftDespawnArea" method="_on_body_entered"]
