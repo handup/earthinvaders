@@ -3,7 +3,7 @@ extends Node2D
 @onready var respawn_timer: Timer = $RespawnTimer
 const PLAYER = preload("uid://cbici8sgdb6i2")
 @onready var earthlings: Node2D = $Earthlings
-const MOTHERSHIP = preload("uid://bmmksnkx8kfhc")
+const HELICOPTER = preload("uid://bmmksnkx8kfhc")
 
 const LIVES = 3
 var score = 0
@@ -17,7 +17,7 @@ signal score_changed(score: int)
 signal game_won
 
 func _ready() -> void:
-	spawnMothership()
+	spawnHelicopter()
 	spawnPlayer()
 	for earthling_group in get_children():
 		for earthling in earthling_group.get_children():
@@ -47,6 +47,9 @@ func _on_enemy_death(score_gained: int) -> void:
 	if remaining_earthlings == 0:
 		win_game()
 		
+func _on_helicopter_death() -> void:
+	increase_score(300)
+		
 func win_game() -> void:
 	change_state(State.GAME_WON)
 
@@ -72,6 +75,7 @@ func spawnPlayer() -> void:
 	earthlings.player = player
 	add_child(player)
 	
-func spawnMothership() -> void:
-	var mothership = MOTHERSHIP.instantiate()
-	add_child(mothership)
+func spawnHelicopter() -> void:
+	var helicopter = HELICOPTER.instantiate()
+	helicopter.death.connect(_on_helicopter_death)
+	add_child(helicopter)

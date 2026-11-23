@@ -8,3 +8,4 @@ res://scenes/game_won_label.gd
 res://scenes/mothership.tscn
 res://scenes/mothership.gd
 res://scenes/area_2d.gd
+res://scenes/helicopter.gd

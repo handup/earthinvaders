@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmmksnkx8kfhc"]
 
-[ext_resource type="Script" uid="uid://ty5wedth04r5" path="res://scenes/mothership.gd" id="1_nmebv"]
+[ext_resource type="Script" uid="uid://ty5wedth04r5" path="res://scenes/helicopter.gd" id="1_nmebv"]
 [ext_resource type="Texture2D" uid="uid://c6bm88shaywkw" path="res://icon.svg" id="2_m1d0c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_byoqh"]
@@ -43,7 +43,7 @@ _data = {
 &"break": SubResource("Animation_30be8")
 }
 
-[node name="Mothership" type="StaticBody2D" unique_id=75532010]
+[node name="Helicopter" type="CharacterBody2D" unique_id=336180084]
 script = ExtResource("1_nmebv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1834894635]
